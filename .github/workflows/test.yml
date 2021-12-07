@@ -2,7 +2,7 @@ name: Test
 "on":
   push:
     branches:
-      - master
+      - main
       - renovate/**
   pull_request:
     types:
@@ -29,10 +29,10 @@ jobs:
         with:
           node-version: "${{ matrix.node-version }}"
           cache: npm
-      - run: npm ci
+      - run: yarn ci
       - name: Ensure dependencies are compatible with the version of node
         run: npx ls-engines
-      - run: "npm run test:ci"
+      - run: "yarn test:ci"
   test:
     runs-on: ubuntu-latest
     needs: test_matrix
@@ -43,5 +43,5 @@ jobs:
         with:
           node-version: "${{ matrix.node-version }}"
           cache: npm
-      - run: npm ci
-      - run: npm run lint
+      - run: yarn ci
+      - run: yarn lint

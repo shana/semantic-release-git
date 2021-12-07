@@ -1,5 +1,5 @@
 {
-  "name": "@semantic-release/git",
+  "name": "@shana/semantic-release-git",
   "description": "semantic-release plugin to commit release assets to the project's git repository",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
@@ -32,6 +32,7 @@
     "fs-extra": "10.0.0",
     "get-stream": "6.0.1",
     "git-log-parser": "1.2.0",
+    "npm-run-all": "^4.1.5",
     "nyc": "15.1.0",
     "semantic-release": "18.0.1",
     "sinon": "12.0.1",
@@ -82,14 +83,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/semantic-release/git.git"
+    "url": "https://github.com/shana/semantic-release-git.git"
   },
   "scripts": {
     "lint": "xo",
-    "pretest": "npm run lint",
+    "pretest": "run-s lint",
     "semantic-release": "semantic-release",
     "test": "nyc ava -v",
-    "test:ci": "nyc ava -v"
+    "test:ci": "nyc ava -v",
+    "ci": "git clean -xdf node_modules && yarn install --frozen-lockfile"
   },
   "xo": {
     "prettier": true,

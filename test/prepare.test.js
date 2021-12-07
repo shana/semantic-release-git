@@ -114,11 +114,11 @@ test('Commit files matching the patterns in "assets"', async t => {
   // Verify file2 and file1 have been commited
   // file4.js is excluded as no glob matching
   // file3.css is ignored due to the negative glob '!dir/*.css'
-  // file5.js is not ignored even if it's in the .gitignore
+  // file5.js is ignored because it's in the .gitignore
   // file6.js and file7.css are included because dir2 is expanded
   t.deepEqual(
     (await gitCommitedFiles('HEAD', {cwd, env})).sort(),
-    ['dir/file2.js', 'dir2/file6.js', 'dir2/file7.css', 'file1.js', 'file5.js'].sort()
+    ['dir/file2.js', 'dir2/file6.js', 'dir2/file7.css', 'file1.js'].sort()
   );
   t.deepEqual(t.context.log.args[0], ['Found %d file(s) to commit', 5]);
 });
@@ -148,11 +148,11 @@ test('Commit files matching the patterns in "assets" as Objects', async t => {
   // Verify file2 and file1 have been commited
   // file4.js is excluded as no glob matching
   // file3.css is ignored due to the negative glob '!dir/*.css'
-  // file5.js is not ignored even if it's in the .gitignore
+  // file5.js is ignored because it's in the .gitignore
   // file6.js and file7.css are included because dir2 is expanded
   t.deepEqual(
     (await gitCommitedFiles('HEAD', {cwd, env})).sort(),
-    ['dir/file2.js', 'dir2/file6.js', 'dir2/file7.css', 'file1.js', 'file5.js'].sort()
+    ['dir/file2.js', 'dir2/file6.js', 'dir2/file7.css', 'file1.js'].sort()
   );
   t.deepEqual(t.context.log.args[0], ['Found %d file(s) to commit', 5]);
 });
