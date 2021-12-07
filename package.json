@@ -26,6 +26,7 @@
     "p-reduce": "^2.0.0"
   },
   "devDependencies": {
+    "@shana/semantic-release-git": "https://github.com/shana/semantic-release-git",
     "ava": "3.15.0",
     "clear-module": "4.1.2",
     "file-url": "3.0.0",

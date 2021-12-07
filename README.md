@@ -1,10 +1,8 @@
-# @semantic-release/git
+# @shana/semantic-release-git
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to commit release assets to the project's [git](https://git-scm.com/) repository.
 
-[![Build Status](https://github.com/semantic-release/git/workflows/Test/badge.svg)](https://github.com/semantic-release/git/actions?query=workflow%3ATest+branch%3Amaster) [![npm latest version](https://img.shields.io/npm/v/@semantic-release/git/latest.svg)](https://www.npmjs.com/package/@semantic-release/git)
-[![npm next version](https://img.shields.io/npm/v/@semantic-release/git/next.svg)](https://www.npmjs.com/package/@semantic-release/git)
-[![npm beta version](https://img.shields.io/npm/v/@semantic-release/git/beta.svg)](https://www.npmjs.com/package/@semantic-release/git)
+[![Build Status](https://github.com/shana/semantic-release-git/workflows/Test/badge.svg)](https://github.com/shana/semantic-release-git/actions?query=workflow%3ATest+branch%3Amaster)
 
 | Step               | Description                                                                                                                        |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -14,7 +12,7 @@
 ## Install
 
 ```bash
-$ npm install @semantic-release/git -D
+$ npm install @shana/semantic-release-git -D
 ```
 
 ## Usage
@@ -26,7 +24,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    ["@semantic-release/git", {
+    ["@shana/semantic-release-git", {
       "assets": ["dist/**/*.{js,css}", "docs", "package.json"],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }]
@@ -120,8 +118,8 @@ If a directory is configured, all the files under this directory and its childre
 ### Examples
 
 When used with the [@semantic-release/changelog](https://github.com/semantic-release/changelog) or [@semantic-release/npm](https://github.com/semantic-release/npm) plugins:
-- The [@semantic-release/changelog](https://github.com/semantic-release/changelog) plugin must be called first in order to update the changelog file so the `@semantic-release/git` and [@semantic-release/npm](https://github.com/semantic-release/npm) plugins can include it in the release.
-- The [@semantic-release/npm](https://github.com/semantic-release/npm) plugin must be called second in order to update the `package.json` file so the `@semantic-release/git` plugin can include it in the release commit.
+- The [@semantic-release/changelog](https://github.com/semantic-release/changelog) plugin must be called first in order to update the changelog file so the `@shana/semantic-release=git` and [@semantic-release/npm](https://github.com/semantic-release/npm) plugins can include it in the release.
+- The [@semantic-release/npm](https://github.com/semantic-release/npm) plugin must be called second in order to update the `package.json` file so the `@shana/semantic-release-git` plugin can include it in the release commit.
 
 ```json
 {
@@ -130,7 +128,7 @@ When used with the [@semantic-release/changelog](https://github.com/semantic-rel
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/npm",
-    "@semantic-release/git"
+    "@shana/semantic-release-git"
   ],
 }
 ```
