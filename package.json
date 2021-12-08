@@ -1,7 +1,7 @@
 {
   "name": "@sh4na/semantic-release-git",
   "description": "semantic-release plugin to commit release assets to the project's git repository",
-  "version": "11.0.2",
+  "version": "11.0.3",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
   "ava": {
     "files": [
