@@ -644,9 +644,9 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@shana/semantic-release-git@https://github.com/shana/semantic-release-git":
+"@shana/semantic-release-git@https://github.com/shana/semantic-release-git#778340d1f0f34f7145d12b4f938f7ed9ad5c9fad":
   version "0.0.0-development"
-  resolved "https://github.com/shana/semantic-release-git#a52ca0e8118556c61614965aec910e0c0dc75d87"
+  resolved "https://github.com/shana/semantic-release-git#778340d1f0f34f7145d12b4f938f7ed9ad5c9fad"
   dependencies:
     "@semantic-release/error" "^3.0.0"
     aggregate-error "^3.0.0"
