@@ -26,6 +26,7 @@
     "p-reduce": "^2.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
     "@shana/semantic-release-git": "https://github.com/shana/semantic-release-git#778340d1f0f34f7145d12b4f938f7ed9ad5c9fad",
     "ava": "3.15.0",
     "clear-module": "4.1.2",
@@ -85,7 +86,7 @@
   "scripts": {
     "lint": "xo",
     "pretest": "run-s lint",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "test": "nyc ava -v",
     "test:ci": "nyc ava -v",
     "ci": "git clean -xdf node_modules && yarn install --frozen-lockfile"
